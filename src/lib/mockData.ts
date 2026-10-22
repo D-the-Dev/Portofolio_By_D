@@ -1,0 +1,127 @@
+import type { ProfileConfig, Project, Certificate, Experience } from '../types';
+
+export const mockProfile: ProfileConfig = {
+  id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+  full_name: 'Reyhan Maulana',
+  headline: 'Full-Stack Developer & Cloud Systems Architect',
+  bio: 'Spesialis dalam perancangan arsitektur web modern berbasis Serverless, Reactive UI, dan High-Performance Distributed Systems. Berpengalaman membangun aplikasi skala enterprise dengan prinsip Zero-Trust Security dan estetika Cyber Dark yang presisi.',
+  cv_file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+  cv_updated_at: new Date().toISOString(),
+  social_links: {
+    github: 'https://github.com',
+    linkedin: 'https://linkedin.com',
+    email: 'reyhan.engineer@matrix.dev',
+    twitter: 'https://twitter.com',
+  },
+};
+
+export const mockProjects: Project[] = [
+  {
+    id: 'p-1',
+    slug: 'nexus-vault-auth',
+    title: 'Nexus Vault - Zero-Trust Identity',
+    description: 'Sistem manajemen akses terdistribusi dengan autentikasi biometrik WebAuthn, validasi JWT asimetris, dan audit log anti-tamper berbasis cryptographic hashing.',
+    tech_stack: ['React', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Framer Motion'],
+    thumbnail_url: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80',
+    demo_url: 'https://demo.example.com/nexus-vault',
+    repo_url: 'https://github.com/example/nexus-vault',
+    is_featured: true,
+    created_at: new Date(Date.now() - 30 * 24 * 3600 * 1000).toISOString(),
+  },
+  {
+    id: 'p-2',
+    slug: 'emerald-metrics-dashboard',
+    title: 'Emerald Cloud Metrics Monitor',
+    description: 'Dashboard telemetri infrastruktur real-time untuk pemantauan throughput microservices, latency p99, dan anomali query PostgreSQL menggunakan reactive stream websockets.',
+    tech_stack: ['React 18', 'TanStack Query', 'Tailwind CSS', 'PostgreSQL'],
+    thumbnail_url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    demo_url: 'https://demo.example.com/emerald-metrics',
+    repo_url: 'https://github.com/example/emerald-metrics',
+    is_featured: true,
+    created_at: new Date(Date.now() - 60 * 24 * 3600 * 1000).toISOString(),
+  },
+  {
+    id: 'p-3',
+    slug: 'sentinel-ai-code-scanner',
+    title: 'Sentinel Code Security Analyzer',
+    description: 'Engine pemindaian kerentanan otomatis untuk pipeline CI/CD yang mengidentifikasi SQL Injection, secret leaks, dan RLS misconfigurations sebelum deployment ke production.',
+    tech_stack: ['TypeScript', 'Node.js', 'PostgreSQL', 'Docker'],
+    thumbnail_url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
+    demo_url: 'https://demo.example.com/sentinel-ai',
+    repo_url: 'https://github.com/example/sentinel-ai',
+    is_featured: false,
+    created_at: new Date(Date.now() - 90 * 24 * 3600 * 1000).toISOString(),
+  },
+  {
+    id: 'p-4',
+    slug: 'aurora-bento-portfolio',
+    title: 'Aurora Serverless Portfolio Engine',
+    description: 'Template web portofolio single-admin modern dengan integrasi database Supabase RLS, reactive TanStack cache, dan UI bertema Obsidian Emerald dark matrix.',
+    tech_stack: ['React', 'Vite', 'Tailwind CSS', 'Supabase Storage'],
+    thumbnail_url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    demo_url: 'https://demo.example.com/aurora-portfolio',
+    repo_url: 'https://github.com/example/aurora-portfolio',
+    is_featured: true,
+    created_at: new Date(Date.now() - 15 * 24 * 3600 * 1000).toISOString(),
+  },
+];
+
+export const mockCertificates: Certificate[] = [
+  {
+    id: 'c-1',
+    title: 'AWS Certified Solutions Architect – Associate',
+    issuer: 'Amazon Web Services (AWS)',
+    issue_date: '2024 - 2027',
+    file_url: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=1200&q=80',
+    credential_url: 'https://aws.amazon.com/verification',
+    created_at: new Date(Date.now() - 120 * 24 * 3600 * 1000).toISOString(),
+  },
+  {
+    id: 'c-2',
+    title: 'Meta Certified Professional Front-End Developer',
+    issuer: 'Meta & Coursera',
+    issue_date: '2023',
+    file_url: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80',
+    credential_url: 'https://coursera.org/verify',
+    created_at: new Date(Date.now() - 200 * 24 * 3600 * 1000).toISOString(),
+  },
+  {
+    id: 'c-3',
+    title: 'PostgreSQL Advanced DBA & Performance Tuning',
+    issuer: 'Postgres Professional Academy',
+    issue_date: '2023',
+    file_url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+    credential_url: 'https://postgrespro.com',
+    created_at: new Date(Date.now() - 250 * 24 * 3600 * 1000).toISOString(),
+  },
+];
+
+export const mockExperiences: Experience[] = [
+  {
+    id: 'e-1',
+    role: 'Lead Full-Stack Engineer',
+    organization: 'CyberCore Distributed Labs',
+    period: '2023 - Sekarang',
+    description: 'Memimpin arsitektur antarmuka dan backend micro-frontends. Mengurangi latency API sebesar 42% melalui optimasi query database PostgreSQL dan implementasi caching TanStack Query terstruktur.',
+    is_current: true,
+    created_at: new Date(Date.now() - 100 * 24 * 3600 * 1000).toISOString(),
+  },
+  {
+    id: 'e-2',
+    role: 'Senior React & Cloud Developer',
+    organization: 'Vortex Quantum Technologies',
+    period: '2021 - 2023',
+    description: 'Mengembangkan platform monitoring real-time berbasis WebSockets dan Supabase Auth/Storage. Menerapkan arsitektur zero-trust security dan integrasi CI/CD automated test suite.',
+    is_current: false,
+    created_at: new Date(Date.now() - 400 * 24 * 3600 * 1000).toISOString(),
+  },
+  {
+    id: 'e-3',
+    role: 'Software Engineer',
+    organization: 'Nusa Digital Innovations',
+    period: '2019 - 2021',
+    description: 'Membangun SPA responsif dengan React.js, Tailwind CSS, dan RESTful / GraphQL APIs. Berkolaborasi dengan tim UI/UX untuk menciptakan komponen bento grid interaktif.',
+    is_current: false,
+    created_at: new Date(Date.now() - 800 * 24 * 3600 * 1000).toISOString(),
+  },
+];
